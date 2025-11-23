@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Muhammad Abubakar - Portfolio",
-  description: "Your best service provider",
+  title: "BKR Trading Tools",
+  description: "Let's makes the traders life easy",
 };
 
 interface RootLayoutProps {
