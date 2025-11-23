@@ -6,8 +6,26 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BKR Trading Tools",
-  description: "Let's makes the traders life easy",
+  icons: {
+    icon: [
+      { url: "/favicons/favicon-16x16.png", sizes: "16x16" },
+      { url: "/favicons/favicon-32x32.png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/favicons/apple-touch-icon.png", sizes: "180x180" }],
+    other: [
+      {
+        rel: "icon",
+        url: "/favicons/android-chrome-192x192.png",
+        sizes: "192x192",
+      },
+      {
+        rel: "icon",
+        url: "/favicons/android-chrome-512x512.png",
+        sizes: "512x512",
+      },
+    ],
+  },
+  manifest: "/favicons/site.webmanifest",
 };
 
 interface RootLayoutProps {
