@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  title: "Trading Tools",
+  description: "Let's makes the traders life simple with these tools",
   icons: {
     icon: [
       { url: "/favicons/favicon-16x16.png", sizes: "16x16" },
