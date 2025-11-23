@@ -24,7 +24,7 @@ export function FormField({ name, control, label, id }: FormFieldProps) {
         >
           <FieldLabel
             htmlFor={id}
-            className="text-sm font-medium text-foreground"
+            className="text-xs font-medium text-muted-foreground mb-2"
           >
             {label}
           </FieldLabel>
@@ -34,7 +34,7 @@ export function FormField({ name, control, label, id }: FormFieldProps) {
             step="0.01"
             type="number"
             autoComplete="off"
-            className="h-11 text-base transition-all duration-200 sm:text-sm"
+            className="h-11 text-base font-semibold transition-all duration-200 sm:text-sm bg-background border-border focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
             aria-invalid={fieldState.invalid}
             aria-describedby={fieldState.invalid ? `${id}-error` : undefined}
           />

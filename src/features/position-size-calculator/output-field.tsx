@@ -9,16 +9,16 @@ interface OutputFieldProps {
 export function OutputField({ label, value }: OutputFieldProps) {
   return (
     <Field>
-      <FieldLabel className="text-sm font-medium text-foreground">
+      <FieldLabel className="text-xs font-medium text-muted-foreground mb-2">
         {label}
       </FieldLabel>
       <div
         className={cn(
-          "relative h-11 w-full rounded-md border border-border bg-muted/50 px-4 py-2.5",
-          "flex items-center text-base font-medium text-foreground",
+          "relative h-12 w-full rounded-lg border border-border bg-background px-4 py-3",
+          "flex items-center text-lg font-semibold text-foreground font-mono",
           "transition-all duration-200",
-          "sm:text-sm",
-          "focus-within:border-ring/50 focus-within:bg-muted/70"
+          "sm:text-base",
+          "shadow-sm"
         )}
         role="textbox"
         aria-label={`${label}: ${value.toFixed(2)}`}
