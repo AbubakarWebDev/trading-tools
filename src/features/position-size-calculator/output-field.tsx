@@ -9,14 +9,22 @@ interface OutputFieldProps {
 export function OutputField({ label, value }: OutputFieldProps) {
   return (
     <Field>
-      <FieldLabel>{label}</FieldLabel>
+      <FieldLabel className="text-sm font-medium text-foreground">
+        {label}
+      </FieldLabel>
       <div
         className={cn(
-          "h-9 w-full rounded-md border bg-muted px-3 py-1 text-base flex items-center",
-          "md:text-sm"
+          "relative h-11 w-full rounded-md border border-border bg-muted/50 px-4 py-2.5",
+          "flex items-center text-base font-medium text-foreground",
+          "transition-all duration-200",
+          "sm:text-sm",
+          "focus-within:border-ring/50 focus-within:bg-muted/70"
         )}
+        role="textbox"
+        aria-label={`${label}: ${value.toFixed(2)}`}
+        tabIndex={0}
       >
-        {value.toFixed(2)}
+        <span className="select-all">{value.toFixed(2)}</span>
       </div>
     </Field>
   );

@@ -18,18 +18,33 @@ export function FormField({ name, control, label, id }: FormFieldProps) {
       name={name}
       control={control}
       render={({ field, fieldState }) => (
-        <Field data-invalid={fieldState.invalid}>
-          <FieldLabel htmlFor={id}>{label}</FieldLabel>
+        <Field
+          data-invalid={fieldState.invalid}
+          className="transition-all duration-200"
+        >
+          <FieldLabel
+            htmlFor={id}
+            className="text-sm font-medium text-foreground"
+          >
+            {label}
+          </FieldLabel>
           <Input
             {...field}
             id={id}
             step="0.01"
             type="number"
             autoComplete="off"
-            className="text-base"
+            className="h-11 text-base transition-all duration-200 sm:text-sm"
             aria-invalid={fieldState.invalid}
+            aria-describedby={fieldState.invalid ? `${id}-error` : undefined}
           />
-          {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
+          {fieldState.invalid && (
+            <FieldError
+              id={`${id}-error`}
+              errors={[fieldState.error]}
+              className="mt-1.5"
+            />
+          )}
         </Field>
       )}
     />
