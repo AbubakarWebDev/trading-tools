@@ -47,7 +47,7 @@ export function PositionSizeCalculator() {
           <div className="p-3 rounded-xl bg-primary/10">
             <Calculator className="h-6 w-6 text-primary" />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight text-primary text-left sm:text-4xl">
             Position Size Calculator
           </h1>
         </div>
